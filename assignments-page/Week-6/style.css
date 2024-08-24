@@ -1,0 +1,106 @@
+/* General body styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+/* Container for main content */
+.main-container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Styles for header section */
+.header-section {
+    margin-bottom: 20px;
+}
+
+.description {
+    font-size: 1.2em;
+    line-height: 1.5;
+}
+
+/* Styles for groups of operators */
+.operator-group {
+    margin-bottom: 20px;
+}
+
+/* Styles for individual operator boxes */
+.operator-box {
+    border: 0.1px solid lightgray;
+    box-shadow: 8px 11px 15px lightgray;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 4px;
+}
+
+/* Header for each operator group */
+h3 {
+    margin-top: 0;
+}
+
+/* Example section within an operator box */
+.example {
+    margin-top: 10px;
+}
+
+/* Styles for operator descriptions */
+.operator-description {
+    margin-bottom: 10px;
+    transition: all 0.3s ease;
+    /* Smooth transition for hover effect */
+}
+
+/* Hover effect for operator descriptions */
+.operator-description:hover {
+    background-color: #000;
+    /* Black background on hover */
+    color: #fff;
+    /* White text on hover */
+    font-size: 1.2em;
+    /* Slightly larger text on hover */
+    transform: scale(1.05);
+    /* Slight zoom effect */
+    padding: 10px;
+    /* Ensure padding is consistent with zoom */
+    border-radius: 4px;
+    /* Optional: Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    /* Optional: Shadow effect */
+}
+
+/* Styles for operator names */
+.operator-name {
+    font-weight: bold;
+}
+pre {
+    background-color: #f0f0f0;
+    padding: 10px;
+    border-radius: 4px;
+    display: block;
+    transition: all 0.3s ease; /* Smooth transition for all changes */
+    position: relative; /* Use relative positioning */
+}
+
+pre:hover {
+    font-size: 1.5em; /* Increase font size */
+    cursor: default;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    transform: scale(1.1); /* Optional zoom effect */
+    z-index: 1; /* Ensure it stays above other elements */
+}
+
+
+
+
+
+
+
+@media screen and (max-width: 480px){
+    body{
+        background: black;
+    }
+}

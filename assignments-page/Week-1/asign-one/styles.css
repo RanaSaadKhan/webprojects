@@ -1,0 +1,31 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #fff;
+    width: 500px;
+    height: 300px;
+
+}
+
+.ad-container {
+    text-align: left;
+    color: #333;
+}
+
+.discount {
+    color: purple;
+    font-weight: bold;
+}
+
+h1 {
+    font-size: 2em;
+    color: #333;
+}
+
+.highlight {
+    color: purple;
+}

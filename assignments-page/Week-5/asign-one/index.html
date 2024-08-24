@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Quiz</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="javascript.js" defer></script>
+</head>
+<body>
+    <div class="inner">
+        <div id="timer">00:00</div>
+        <div id="quiz-container">
+            <!-- Question 1 -->
+            <div class="question active">
+                <p>Which HTML tag is used to define an internal style sheet?</p>
+                <label><input type="radio" name="q1" value="A"> &lt;style&gt;</label>
+                <label><input type="radio" name="q1" value="B"> &lt;css&gt;</label>
+                <label><input type="radio" name="q1" value="C"> &lt;script&gt;</label>
+                <label><input type="radio" name="q1" value="D"> &lt;link&gt;</label>
+            </div>
+            <!-- Question 2 -->
+            <div class="question">
+                <p>What is the purpose of the &lt;alt&gt; attribute in the &lt;img&gt; tag?</p>
+                <label><input type="radio" name="q2" value="A"> To specify the alignment of the image</label>
+                <label><input type="radio" name="q2" value="B"> To provide alternative text for the image</label>
+                <label><input type="radio" name="q2" value="C"> To define the image source</label>
+                <label><input type="radio" name="q2" value="D"> To set the image dimensions</label>
+            </div>
+            <!-- Question 3 -->
+            <div class="question">
+                <p>Which of the following tags is used to create a hyperlink in HTML?</p>
+                <label><input type="radio" name="q3" value="A"> &lt;link&gt;</label>
+                <label><input type="radio" name="q3" value="B"> &lt;a&gt;</label>
+                <label><input type="radio" name="q3" value="C"> &lt;href&gt;</label>
+                <label><input type="radio" name="q3" value="D"> &lt;url&gt;</label>
+            </div>
+            <!-- Question 4 -->
+            <div class="question">
+                <p>Which attribute is used to specify the character encoding in HTML?</p>
+                <label><input type="radio" name="q4" value="A"> charset</label>
+                <label><input type="radio" name="q4" value="B"> encoding</label>
+                <label><input type="radio" name="q4" value="C"> type</label>
+                <label><input type="radio" name="q4" value="D"> lang</label>
+            </div>
+            <!-- Question 5 -->
+            <div class="question">
+                <p>Which CSS property is used to change the background color of an element?</p>
+                <label><input type="radio" name="q5" value="A"> background-color</label>
+                <label><input type="radio" name="q5" value="B"> color</label>
+                <label><input type="radio" name="q5" value="C"> bg-color</label>
+                <label><input type="radio" name="q5" value="D"> background</label>
+            </div>
+            <!-- Question 6 -->
+            <div class="question">
+                <p>How do you select an element with the class name "example" using CSS?</p>
+                <label><input type="radio" name="q6" value="A"> .example</label>
+                <label><input type="radio" name="q6" value="B"> #example</label>
+                <label><input type="radio" name="q6" value="C"> *example</label>
+                <label><input type="radio" name="q6" value="D"> example</label>
+            </div>
+            <!-- Question 7 -->
+            <div class="question">
+                <p>What does the box-shadow property do in CSS?</p>
+                <label><input type="radio" name="q7" value="A"> Adds shadow to text</label>
+                <label><input type="radio" name="q7" value="B"> Adds shadow to elements</label>
+                <label><input type="radio" name="q7" value="C"> Adjusts the brightness of the element</label>
+                <label><input type="radio" name="q7" value="D"> Changes the border style</label>
+            </div>
+            <!-- Question 8 -->
+            <div class="question">
+                <p>Which CSS property is used to set the space between lines of text?</p>
+                <label><input type="radio" name="q8" value="A"> line-height</label>
+                <label><input type="radio" name="q8" value="B"> letter-spacing</label>
+                <label><input type="radio" name="q8" value="C"> text-spacing</label>
+                <label><input type="radio" name="q8" value="D"> font-size</label>
+            </div>
+            <!-- Question 9 -->
+            <div class="question">
+                <p>Which JavaScript method is used to access an HTML element by its ID?</p>
+                <label><input type="radio" name="q9" value="A"> getElementById()</label>
+                <label><input type="radio" name="q9" value="B"> querySelector()</label>
+                <label><input type="radio" name="q9" value="C"> getElementByClass()</label>
+                <label><input type="radio" name="q9" value="D"> findById()</label>
+            </div>
+            <!-- Question 10 -->
+            <div class="question">
+                <p>How can you add a comment in JavaScript?</p>
+                <label><input type="radio" name="q10" value="A"> &lt;!-- comment --&gt;</label>
+                <label><input type="radio" name="q10" value="B"> // comment</label>
+                <label><input type="radio" name="q10" value="C"> /* comment */</label>
+                <label><input type="radio" name="q10" value="D"> # comment</label>
+            </div>
+        </div>
+        <div class="buttons">
+            <button id="prev">Back</button>
+            <button id="next">Next</button>
+        </div>
+    </div>
+</body>
+</html>

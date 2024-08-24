@@ -1,0 +1,41 @@
+
+body{
+    display: flex;
+    text-align: center;
+}
+.inner{
+    background: gray;
+    width: 600px;
+ height: 470px;
+ border: 1px solid red;
+
+}
+.text{
+       margin: 4px;
+       width: 590px;
+       height: 54px;
+       background: whitesmoke;
+       display: flex;
+       align-items: center;
+       justify-content: center;
+}
+.sm-box{
+    margin: 4px;
+    width: 375px;
+    height: 140px;
+    background: whitesmoke;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.right-box{
+    position: relative;
+    left: 378px;
+    top: -288px;
+    width: 212px;
+    height: 284px;
+}
+.last-box{
+    position: absolute;
+    top: 414px;
+}

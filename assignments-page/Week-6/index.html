@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="main-container">
+        <header class="header-section">
+          <p class="description">JavaScript has a variety of operators, which can be categorized into several types. Here are the main types of operators in JavaScript, along with examples.</p>
+        </header>
+        <div class="operator-group">
+            <div class="operator-box">
+                <h3>1. Arithmetic Operators</h3>
+                <p>Arithmetic operators are used to perform mathematical operations.</p>
+                <div class="example">
+
+                    <div class="operator-description"><span class="operator-name">Addition (+)</span> : Adds two numbers.</div>
+                    <code>
+                        <pre>
+let sum = 5 + 3; // sum is 8
+let concat = 'Hello' + ' ' + 'World'; // concat is 'Hello World'
+                        </pre>                    </code>
+                </div>
+                <div class="example">
+                    <div class="operator-description"><span class="operator-name">Subtraction (-)</span> : Subtracts the second number from the first.</div>
+                    <code>
+                        <pre>
+let subtraction = 5 - 3; // subtraction is 2
+let subtraction = 15 - 5; // subtraction is 10
+                        </pre>
+                    </code>
+                </div>
+                <div class="example">
+                    <div class="operator-description"><span class="operator-name">Multiplication (*)</span> : Multiply first and second number.</div>
+                    <code>
+                        <pre>
+let multiplication = 5 * 3; // multiplication is 15
+let multiplication = 4 * 6; // multiplication is 24
+                        </pre>
+                    </code>
+                </div>
+                <div class="example">
+                    <div class="operator-description"><span class="operator-name">Division (/)</span> : Divide two numbers.</div>
+                    <code>
+                        <pre>
+let division = 5 / 3; // division is 1.6666666667
+let division = 25 / 5; // division is 5
+                        </pre>
+                    </code>
+                </div>
+                <div class="example">
+                    <div class="operator-description"><span class="operator-name">Modulus (%)</span> : Returns remainder of the number.</div>
+                    <code>
+                        <pre>
+let remainder = 5 % 2; // remainder is 1
+let remainder = 10 % 2; // remainder is 0
+                        </pre>
+                    </code>
+                </div>
+            </div>
+        </div>
+        <div class="operator-group">
+            <div class="operator-box">
+                <h3>2. Comparison Operators</h3>
+                <p>Comparison operators are used to compare two values and return a boolean value (true, false).</p>
+                <div class="example">
+                    <div class="operator-description"><span class="operator-name">Equal to (==)</span> : Checks if two values are equal.</div>
+                    <code>
+                        <pre>
+let isEqual = 5 == '5'; // isEqual is true
+let isEqualStrict = 5 === '5'; // isEqualStrict is false (strict equality)
+                        </pre>
+                    </code>
+                </div>
+                <div class="example">
+                    <div class="operator-description"><span class="operator-name">Greater than (>)</span> : Checks if the first value is greater than the second.</div>
+                    <code>
+                        <pre>
+let isGreater = 10 > 5; // isGreater is true
+let isGreater = 2 > 5; // isGreater is false
+                        </pre>
+                    </code>
+                </div>
+                <div class="example">
+                    <div class="operator-description"><span class="operator-name">Less than (<)</span> : Checks if the first value is less than the second.</div>
+                    <code>
+                        <pre>
+let isLesser = 2 < 5; // isLesser is true
+let isLesser = 10 < 5; // isLesser is false
+                        </pre>
+                    </code>
+                </div>
+                <div class="example">
+                    <div class="operator-description"><span class="operator-name">Greater than or Equal to (>=)</span> : Checks if the first value is greater than or equal to the second.</div>
+                    <code>
+                        <pre>
+let isGreaterThanOrEqualTo = 10 >= 5; // isGreaterThanOrEqualTo is true
+let isGreaterThanOrEqualTo = 2 >= 5; // isGreaterThanOrEqualTo is false
+                        </pre>
+                    </code>
+                </div>
+                <div class="example">
+                    <div class="operator-description"><span class="operator-name">Less than or equal to (<=)</span> : Checks if the first value is less than or equal to the second.</div>
+                    <code>
+                        <pre>
+let isLesserThanOrEqualTo = 2 <= 5; // isLesserThanOrEqualTo is true
+let isLesserThanOrEqualTo = 10 <= 5; // isLesserThanOrEqualTo is false
+                        </pre>
+                    </code>
+                </div>
+            </div>
+        </div>
+        <div class="operator-group">
+            <div class="operator-box">
+                <h3>3. Logical Operators</h3>
+                <p>Logical operators are used to combine two or more conditions.</p>
+                <div class="example">
+                    <div class="operator-description"><span class="operator-name">Logical AND (&&)</span> : Returns true if both conditions are true.</div>
+                    <code>
+                        <pre>
+if (true && true) // true
+let andResult = (5 > 3) && (10 > 5); // andResult is true
+if (true && false) // false
+let andResultFalse = (5 > 3) && (5 > 10); // andResultFalse is false
+if (false && true) // false
+let andResultFalse = (3 > 5) && (10 > 5); // andResultFalse is false
+                        </pre>
+                    </code>
+                </div>
+                <div class="example">
+                    <div class="operator-description"><span class="operator-name">Logical OR (||)</span> : Returns true if at least one condition is true.</div>
+                    <code>
+                        <pre>
+if (true || true) // true
+let orResult = (5 > 3) || (10 > 5); // orResult is true
+if (true || false) // true
+let orResult = (5 > 3) || (5 > 10); // orResult is true
+if (false || false) // false
+let orResultFalse = (5 < 3) || (15 < 10); // orResultFalse is false
+                        </pre>
+                    </code>
+                </div>
+                <div class="example">
+                    <div class="operator-description"><span class="operator-name">Logical NOT (!)</span> : Returns true if the condition is false.</div>
+                    <code>
+                        <pre>
+if (!false) // true
+let andResult = (5 != 3); // andResult is true
+if (!true) // false
+let andResultFalse = (5 != 5); // andResultFalse is false
+                        </pre>
+                    </code>
+                </div>
+            </div>
+        </div>
+        <div class="operator-group">
+            <div class="operator-box">
+                <h3>4. Assignment Operators</h3>
+                <p>Assignment operators are used to assign values to variables.</p>
+                <div class="example">
+                    <div class="operator-description"><span class="operator-name">Assignment (=)</span> : Assigns the right-hand operand to the left-hand operand.</div>
+                    <code>
+                        <pre>
+let x = 10; // x is 10
+let y = 'Hello'; // y is 'Hello'
+                        </pre>
+                    </code>
+                </div>
+                <div class="example">
+                    <div class="operator-description"><span class="operator-name">Addition assignment (+=)</span> : Adds the right-hand operand to the left-hand operand and assigns the result to the left-hand operand.</div>
+                    <code>
+                        <pre>
+let x = 5;
+x += 3; // x is 8
+let str = 'Hello';
+str += ' World'; // str is 'Hello World'
+                        </pre>
+                    </code>
+                </div>
+                <div class="example">
+                    <div class="operator-description"><span class="operator-name">Subtraction assignment (-=)</span> : Subtracts the right-hand operand from the left-hand operand and assigns the result to the left-hand operand.</div>
+                    <code>
+                        <pre>
+let x = 10;
+x -= 4; // x is 6
+                        </pre>
+                    </code>
+                </div>
+                <div class="example">
+                    <div class="operator-description"><span class="operator-name">Multiplication assignment (*=)</span> : Multiplies the right-hand operand by the left-hand operand and assigns the result to the left-hand operand.</div>
+                    <code>
+                        <pre>
+let x = 5;
+x *= 3; // x is 15
+                        </pre>
+                    </code>
+                </div>
+                <div class="example">
+                    <div class="operator-description"><span class="operator-name">Division assignment (/=)</span> : Divides the left-hand operand by the right-hand operand and assigns the result to the left-hand operand.</div>
+                    <code>
+                        <pre>
+let x = 10;
+x /= 2; // x is 5
+                        </pre>
+                    </code>
+                </div>
+                <div class="example">
+                    <div class="operator-description"><span class="operator-name">Modulus assignment (%=)</span> : Takes the modulus using the right-hand operand and assigns the result to the left-hand operand.</div>
+                    <code>
+                        <pre>
+let x = 10;
+x %= 3; // x is 1
+                        </pre>
+                    </code>
+                </div>
+            </div>
+        </div>
+        <div class="operator-group">
+            <div class="operator-box">
+                <h3>5. Unary Operators</h3>
+                <p>Unary operators operate on a single operand to produce a new value.</p>
+                <div class="example">
+                    <div class="operator-description"><span class="operator-name">Unary plus (+)</span> : Converts a variable to a number.</div>
+                    <code>
+                        <pre>
+let x = '5';
+x = +x; // x is 5 (number)
+                        </pre>
+                    </code>
+                </div>
+                <div class="example">
+                    <div class="operator-description"><span class="operator-name">Unary minus (-)</span> : Negates a number.</div>
+                    <code>
+                        <pre>
+let x = 5;
+x = -x; // x is -5
+                        </pre>
+                    </code>
+                </div>
+                <div class="example">
+                    <div class="operator-description"><span class="operator-name">Increment (++)</span> : Increases a variable’s value by one.</div>
+                    <code>
+                        <pre>
+let x = 5;
+x++; // x is 6
+                        </pre>
+                    </code>
+                </div>
+                <div class="example">
+                    <div class="operator-description"><span class="operator-name">Decrement (--)</span> : Decreases a variable’s value by one.</div>
+                    <code>
+                        <pre>
+let x = 5;
+x--; // x is 4
+                        </pre>
+                    </code>
+                </div>
+                <div class="example">
+                    <div class="operator-description"><span class="operator-name">Logical NOT (!)</span> : Reverses the logical state of its operand.</div>
+                    <code>
+                        <pre>
+let isTrue = true;
+isTrue = !isTrue; // isTrue is false
+                        </pre>
+                    </code>
+                </div>
+            </div>
+        </div>
+        <div class="operator-group">
+            <div class="operator-box">
+                <h3>6. Conditional (Ternary) Operator</h3>
+                <p>The conditional (ternary) operator is a shorthand for an `if-else` statement.</p>
+                <div class="example">
+                    <div class="operator-description"><span class="operator-name">Conditional (?:)</span> : Evaluates a condition and returns one of two values.</div>
+                    <code>
+                        <pre>
+let age = 18;
+let isAdult = (age >= 18) ? 'Yes' : 'No'; // isAdult is 'Yes'
+                        </pre>
+                    </code>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

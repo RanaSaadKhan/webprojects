@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript time function</title>
+</head>
+<style>
+    #button {
+        display: flex;
+        justify-content: center;
+        font-size: 2rem;
+        margin: 20px;
+    }
+
+    #timer {
+        display: flex;
+        justify-content: center;
+        font-size: 2rem;
+        margin: 20px;
+    }
+</style>
+
+<body>
+
+
+    <div id="timer">00:00</div>
+    <div id="button">
+        <button id="startButton">Start</button>
+    </div>
+    <script>
+        let timerInterval;
+        let totalSeconds = 0;
+
+        document.getElementById('startButton').addEventListener('click', function () {
+            if (timerInterval) {
+                clearInterval(timerInterval);
+            }
+            timerInterval = setInterval(function () {
+                totalSeconds++;
+                updateTimerDisplay(totalSeconds);
+            }, 1000);
+
+        });
+        function updateTimerDisplay(seconds) {
+            const minutes = Math.floor(seconds / 60);
+            const remainingSeconds = seconds % 60;
+            const minutesFormatted = minutes.toString().padStart(2, '0');
+            const secondsFormatted = remainingSeconds.toString().padStart(2, '0');
+
+            document.getElementById('timer').textContent = ` ${minutesFormatted}:
+             ${secondsFormatted} `;
+
+        }
+    </script>
+</body>
+
+</html>
