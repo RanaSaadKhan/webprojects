@@ -3,11 +3,48 @@ body{
     display: flex;
     text-align: center;
 }
+.header_ {
+    width: 100%;
+    padding: 10px 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+    position: absolute;
+    top: 0px;
+    left: 0;
+}
+ .header_btn {
+    text-decoration: none !important;
+    background: none;
+    border: 1px solid rgb(13, 244, 63);
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+    color: black;
+}
+
+.header_btn:hover  {
+    border: 3px solid #007bff;
+    font-weight: bold;
+    cursor: pointer;
+    background-color: #007bff;
+    color: white;
+}
+.header_btn:hover a{
+    text-decoration: none;
+    color: white;
+}
 .inner{
+    position: absolute;
+    top: 6pc;
     background: gray;
     width: 600px;
  height: 470px;
- border: 1px solid red;
 
 }
 .text{
@@ -37,5 +74,5 @@ body{
 }
 .last-box{
     position: absolute;
-    top: 414px;
+    top: 407px;
 }

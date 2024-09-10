@@ -5,6 +5,45 @@ body {
     padding: 0;
     background-color: #f4f4f4;
 }
+.header {
+    width: 100%;
+    padding: 10px 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+
+.header button {
+    text-decoration: none !important;
+    background: none;
+    border: 1px solid rgb(13, 244, 63);
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+    color: black;
+}
+
+.header button:hover  {
+    border: 3px solid #007bff;
+    font-weight: bold;
+    cursor: pointer;
+    background-color: #007bff;
+    color: white;
+}
+.header button:hover a{
+    text-decoration: none;
+    color: white;
+}
+
 
 /* Container for main content */
 .main-container {

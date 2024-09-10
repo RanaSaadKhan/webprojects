@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Calculator with Header</title>
+    <style>
+        /* Global styles */
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Header styles */
+        .header {
+            width: 100%;
+            padding: 10px 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-sizing: border-box;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        .header button {
+            text-decoration: none !important;
+            background: none;
+            border: 1px solid rgb(13, 244, 63);
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s, color 0.3s;
+            color: black;
+        }
+
+        .header button:hover  {
+            border: 3px solid #007bff;
+            font-weight: bold;
+            cursor: pointer;
+            background-color: #007bff;
+            color: white;
+        }
+        .header button:hover a{
+            text-decoration: none;
+            color: white;
+        }
+
+        /* Calculator styles */
+        .calculator {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            text-align: center;
+            margin-top: 80px; /* Margin to push the calculator below the header */
+        }
+
+        input {
+            width: 92%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        button.calculate-btn {
+            width: 100%;
+            padding: 10px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        button.calculate-btn:hover {
+            background-color: #0056b3;
+        }
+
+        p {
+            margin-top: 20px;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        /* Responsive design */
+        @media (max-width: 600px) {
+            .calculator {
+                width: 100%;
+                padding: 15px;
+            }
+
+            .header {
+                flex-direction: column;
+            }
+
+            .header button {
+                width: 100%;
+                margin-top: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header with buttons -->
+    <div class="header">
+        <a href=""><button>Next</button></a> <!-- Left side button -->
+        <button><a href="../Week-6/index.html">Back</a></button> <!-- Right side button -->
+    </div>
+
+    <!-- Calculator -->
+    <div class="calculator">
+        <input type="text" id="num1" placeholder="Enter first number">
+        <input type="text" id="operator" placeholder="Enter operator (+, -, *, /)">
+        <input type="text" id="num2" placeholder="Enter second number">
+        <button class="calculate-btn" onclick="calculate()">Calculate</button>
+        <p id="result">Result will appear here</p>
+    </div>
+
+    <!-- JavaScript for calculator -->
+    <script>
+        function calculate() {
+            const num1 = parseFloat(document.getElementById('num1').value);
+            const operator = document.getElementById('operator').value;
+            const num2 = parseFloat(document.getElementById('num2').value);
+            let result;
+
+            if (operator === '+') {
+                result = num1 + num2;
+            } else if (operator === '-') {
+                result = num1 - num2;
+            } else if (operator === '*') {
+                result = num1 * num2;
+            } else if (operator === '/') {
+                result = num1 / num2;
+            } else {
+                result = 'Invalid operator';
+            }
+
+            document.getElementById('result').textContent = result;
+        }
+
+        function next() {
+            alert("Next button clicked!");
+        }
+
+        function previous() {
+            alert("Back button clicked!");
+        }
+    </script>
+
+</body>
+</html>

@@ -6,6 +6,42 @@ body{
     display: flex;
     justify-content: center;
 }
+.header_ {
+    width: 100%;
+    padding: 10px 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+    position: absolute;
+    top: -183px;
+    left: 0;
+}
+ .header_btn {
+    text-decoration: none !important;
+    background: none;
+    border: 1px solid rgb(13, 244, 63);
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+    color: black;
+}
+
+.header_btn:hover  {
+    border: 3px solid #007bff;
+    font-weight: bold;
+    cursor: pointer;
+    background-color: #007bff;
+    color: white;
+}
+.header_btn:hover a{
+    text-decoration: none;
+    color: white;
+}
 .main-box{
     display: grid;
     align-content: center;
@@ -20,7 +56,7 @@ body{
     color: rgba(129,145,162,255);
     font-size: large;
 }
-button{
+.button{
     font-weight: bold;
     width: 280px;
 }
@@ -32,7 +68,7 @@ button{
     padding-left: 30px;
 }
 /* From Uiverse.io by BHARGAVPATEL1244 */ 
-button {
+.button {
     outline: none;
     cursor: pointer;
     border: none;
@@ -57,12 +93,12 @@ button {
     transition: color 0.4s;
    }
    
-   button:hover span {
+   .button:hover span {
     color: black;
    }
    
-   button::before,
-   button::after {
+   .button::before,
+   .button::after {
     position: absolute;
     top: 0;
     left: 0;
