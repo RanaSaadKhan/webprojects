@@ -1,0 +1,67 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 9</title>
+    <script>
+        document.onclick = function (e) {
+            coords.innerHTML = e.clientX + '  <span><b> Xexis </b>   </span> : <span> <b> Yexis </b> </span>    ' + e.clientY
+        };
+    </script>
+    <style>
+           /* Header styles */
+           .header {
+            width: 100%;
+            padding: 10px 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-sizing: border-box;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        .header button {
+            text-decoration: none !important;
+            background: none;
+            border: 1px solid rgb(13, 244, 63);
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s, color 0.3s;
+            color: black;
+        }
+
+        .header button:hover  {
+            border: 3px solid #007bff;
+            font-weight: bold;
+            cursor: pointer;
+            background-color: #007bff;
+            color: white;
+        }
+        .header button:hover a{
+            text-decoration: none;
+            color: white;
+        }
+        h1{
+            margin-top: 80px;
+        }
+    </style>
+</head>
+<body>
+     <!-- Header with buttons -->
+     <div class="header">
+        <a href="../../Week-11/index.html"><button>Next</button></a> <!-- Left side button -->
+        <button><a href="../../Week-10/asign-one/index.html">Back</a></button> <!-- Right side button -->
+    </div>
+    <h1>Click here and or anywhere and see result.</h1>
+    <div id="coords">
+        (click show up here.)
+    </div>
+</body>
+</html>

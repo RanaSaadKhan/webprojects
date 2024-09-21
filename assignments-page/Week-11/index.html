@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prime Number Checker</title>
+    <style>
+        .header {
+            width: 100%;
+            padding: 10px 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-sizing: border-box;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        .header button {
+            text-decoration: none !important;
+            background: none;
+            border: 1px solid rgb(13, 244, 63);
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s, color 0.3s;
+            color: black;
+        }
+
+        .header button:hover  {
+            border: 3px solid #007bff;
+            font-weight: bold;
+            cursor: pointer;
+            background-color: #007bff;
+            color: white;
+        }
+        .header button:hover a{
+            text-decoration: none;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+      <!-- Header with buttons -->
+      <div class="header">
+        <a href="../../Week-11/index.html"><button>Next</button></a> <!-- Left side button -->
+        <button><a href="../../Week-10/asign-one/index.html">Back</a></button> <!-- Right side button -->
+    </div>
+    <h1>Prime Number Checker</h1>
+    <input type="number" id="num" placeholder="Enter a number" min="101">
+    <button id="checkButton">Check for Prime Numbers</button>
+    <h2 id="result"></h2>
+    <h1 id="sumResult"></h1> <!-- Added this for displaying the sum -->
+
+    <script>
+        document.getElementById('checkButton').addEventListener('click', function() {
+            const num = parseInt(document.getElementById('num').value);
+            let resultText = "";
+            let primes = []; // Array to hold prime numbers
+
+            if (isNaN(num) || num < 101) {
+                document.getElementById("result").textContent = "Please enter a valid number greater than 100.";
+                return;
+            }
+
+            for (let j = 101; j <= num; j++) { // Start from 101
+                let count = 0; // Reset count for each number
+                
+                for (let i = 1; i <= j; i++) {
+                    if (j % i === 0) count++;
+                }
+
+                if (count === 2) {
+                    primes.push(j); // Collect prime numbers into the array
+                    resultText += j + " "; // Append to resultText for display
+                }
+            }
+
+            // Calculate the sum of prime numbers
+            const sum = primes.reduce((acc, curr) => acc + curr, 0);
+
+            // Display the results
+            document.getElementById("result").textContent = "Prime numbers: " + resultText;
+            document.getElementById("sumResult").textContent = "Sum: " + sum; // Display the sum
+        });
+    </script>
+</body>
+</html>
