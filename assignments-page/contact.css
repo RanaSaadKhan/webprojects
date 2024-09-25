@@ -306,12 +306,14 @@ body, h1, h2, p, a, input, textarea, button {
         flex-direction: column;
         text-align: center;
         width: 70%;
-        border: 0.1px solid;
+        border: none;
     }
 
     .nav-menu a {
-
-        font-size: 40px;
+        border-color: aquamarine;
+        color: white;
+        font-family: monospace;
+        font-size: 15px;
     }
 
     body {

@@ -22,7 +22,6 @@
     left: 0;
 }
 
-
 .header button {
     text-decoration: none !important;
     background: none;
@@ -131,4 +130,9 @@
     border-right: 75px solid yellow;
     border-top: 75px solid green;
     border-bottom: 75px solid blue;
+}
+@media screen and(max-width: 500px) {
+    .outer{
+        width: 300px;
+    }
 }

@@ -256,8 +256,10 @@
             }
 
             .nav-menu a {
-                font-size: 14px;
-                padding: 6px 10px;
+                border-color: aquamarine;
+                color: white;
+                font-family: monospace;
+                font-size: 15px;
             }
            
             .back-button {
@@ -291,12 +293,11 @@
                 flex-direction: column;
                 text-align: center;
                 width: 70%;
-                border: 0.1px solid;
             }
         
             .nav-menu a {
         
-                font-size: 40px;
+                font-size: auto;
             }
         
             body {

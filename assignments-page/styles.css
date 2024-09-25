@@ -250,6 +250,8 @@ body, h1, p, a {
     }
 
     .explore-btn {
+        color: white;
+        background: black;
         font-size: 0.9em;
         padding: 6px 14px;
     }
@@ -288,6 +290,8 @@ color: black;
     }
 
     .explore-btn {
+        color: white;
+        background: black;
         font-size: 0.8em;
         padding: 5px 12px;
     }
@@ -321,8 +325,11 @@ color: black;
         display: flex;
         flex-direction: column;
     }
-    .nav-menu a{
-       font-size: 50px;
+    .nav-menu a{ 
+        border-color: aquamarine;
+        color: white;
+        font-family: monospace;
+        font-size: 15px;
     }
     body{
         width: 100%;

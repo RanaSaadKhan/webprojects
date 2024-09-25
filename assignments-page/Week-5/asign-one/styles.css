@@ -45,6 +45,7 @@ body {
     color: white;
 }
 .inner {
+    margin-top: 5pc;
     width: 36rem;
     height: 450px;
     background: #fff; /* White background for the inner box */
