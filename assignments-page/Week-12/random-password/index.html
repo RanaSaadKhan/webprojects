@@ -19,7 +19,7 @@
     <div class="display">
         <div class="displayFlex">
         <input type="text" id="password" placeholder="password">
-        <img src="/images/copy.png" alt="" onclick="copyPassword()" >
+        <img src="images/copy.png" alt="" onclick="copyPassword()" >
     </div>
        <!-- <input type="text" class="passwordLength" id="passwordLength" placeholder="Enter password length">-->
         <select name="" id="passwordLength">
@@ -31,7 +31,7 @@
             <option value="8">8</option>
         </select>
         <button onclick="createPassword()" id="button"> <i class="fas fa-key"></i> Generate password</button>
-        <img src="images/generate.png" alt="" class="icon-settings">
+
     
     </div>
     <script>
@@ -40,10 +40,10 @@
         const passwordLength = document.getElementById('passwordLength');
         const length = passwordLength.value;
         //const length = passwordLength.value;
-        const upperCase = "ABCKEKDIOOWHHSDLFSLDFS";
-        const lowerCase = "ldkaslfhkasdfalskdhfaslk";
-        const numbers = "123233453";
-        const symbool = "##@%#$%$^$%^%^&%^&*";
+        const upperCase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    const lowerCase = "abcdefghijklmnopqrstuvwxyz";
+    const numbers = "0123456789";
+    const symbols = "!@#$%^&*()_+";
         const allChars = upperCase + lowerCase + numbers + symbool;
         
         function createPassword() {
