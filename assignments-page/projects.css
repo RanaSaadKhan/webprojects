@@ -5,7 +5,11 @@ body, h2, p, a {
     box-sizing: border-box;
     font-family: 'system-ui', sans-serif;
 }
-
+#Portfolio{
+    width: 10px;
+    height: 10px;
+    border-radius: 20%;
+}
 /* Body Styling */
 body {
     background: linear-gradient(90deg, #fc00ff, #00dbde);

@@ -1,0 +1,218 @@
+
+body{
+    background: url(background02.gif);
+    width: 100%;
+    height: 100%;
+    font-family: "Amaranth", sans-serif;
+ 
+}
+.nav-link {
+    color: black !important;
+    font-weight: bold;
+    position: relative;
+    padding-left: 5px;
+    transition: all 0.5s ease;
+  }
+  nav{
+    opacity: 0.8;
+  }
+  nav:hover{
+    opacity: 0.9;
+  }
+  .nav-link::after {
+    content: '';
+    color: yellow !important;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color:  #FFC300 ;
+    transition: width 0.5s ease;
+  }
+  .nav-link:hover {
+    transform: scale(1.1); /* Slight zoom effect */
+    color: #FFC300; /* Change color on hover */
+  }
+  .nav-link:hover::after {
+    opacity: 1;
+    width: 100%; /* Expand underline on hover */
+  }
+  .nav-link.active::after {
+    width: 100%; /* Expand underline to full width */
+    opacity: 1;  /* Make underline visible */
+}
+
+.nav-link.active {
+    color: #FFC300; /* Highlight the active link color */
+    transform: scale(1.1); /* Slight zoom effect */
+}
+
+  .theme-toggle {
+    display: inline-block;
+    font-size: 24px; /* Adjust icon size */
+    padding-left: 7px;
+    color: black;
+    transition: transform 0.3s ease, color 0.3s ease;
+    vertical-align: middle; /* Center the icon */
+  }
+  
+  .theme-toggle:hover {
+    transform: scale(1.2) rotate(20deg); /* Slight zoom and rotation */
+    color:  #FFC300 ; /* Change color on hover */
+  }
+  ul{
+    display: block;
+  }
+  
+  
+  #intro {
+  
+    font-size: 1.5rem;
+    color: #ddd; /* Light color for readability */
+    text-align: left;
+    line-height: 1.6;
+    margin-top: 20px;
+    max-width: 700px;
+    margin-left: 71px;
+    margin-right: auto;
+    padding: 0 20px;
+  }
+  
+  .heading {
+  
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-top: 80px;
+    margin-left: 90px;
+  }
+  .img{
+    border-radius: 55px;
+    vertical-align: middle;
+    width: 25rem;
+    height: auto;
+    position: absolute;
+    top: 12rem;
+    right: 8rem;
+}
+  
+  .heading h1 {
+    font-size: 5rem;
+    color: white;
+    text-align: left !important;
+    font-weight: 500;
+    margin: 0;
+  }
+  
+  h1 span {
+    margin: 0;
+    top: -6px;
+    font-size: 45px;
+    height: 40px;
+    position: relative;
+    color: yellow;
+  }
+  
+  h1 span::after {
+    content: "|";
+    position: absolute;
+    right: -10px;
+    animation: blink 0.8s steps(2) infinite;
+    top: -5px;
+    color: aqua;
+    
+  }
+  #intro:hover{
+    background-color: black;
+    transition: all 0.8s ease;
+  }
+
+  @keyframes blink {
+    0%, 51% {
+      opacity: 1;
+    }
+    70%, 90% {
+      opacity: 0;
+    }
+  }
+  /* Media query for screens smaller than 768px (tablet and mobile) */
+@media (max-width: 768px) {
+  /* Make the navbar full width and collapse the items */
+  .navbar {
+    width: 100%;
+  }
+.img{
+  display: none;
+}
+  /* Navbar links will stack vertically on small screens */
+  .navbar-nav {
+    text-align: center;
+    width: 100%;
+  }
+
+  /* Navbar links should be aligned in the center */
+  .navbar-nav .nav-item {
+    display: inline-block;
+    margin: 10px 0;
+  }
+
+  /* Adjust the size of the navbar links for mobile screens */
+  .nav-link {
+    font-size: 1.2rem;
+  }
+
+  /* Center the heading and adjust the size of the font */
+  .heading h1 {
+    align-items: center;
+    font-size: 3rem;
+    text-align: center;
+    line-height: 1.2;
+  }
+
+  /* Center the span text inside h1 */
+  h1 span {
+    font-size: 2.5rem;
+  }
+
+  /* Positioning "Khan" on the left side for larger screens, but center it on small screens */
+  h1::before {
+    left: 50%;
+    transform: translateX(-50%); /* Center "Khan" */
+    font-size: 3rem; /* Adjust size for mobile screens */
+  }
+}
+
+/* Media query for even smaller screens (e.g., smartphones in portrait mode) */
+@media (max-width: 480px) {
+  /* Reduce the font size for smaller screens */
+  .heading h1 {
+    font-size: 2.5rem;
+  }
+  .img{
+    border-radius: 5px;
+      vertical-align: middle;
+      width: 5rem;
+      height: auto;
+      position: absolute;
+      top: 12rem;
+      right: 6rem;
+  }
+  /* Adjust the font size for the blinking cursor */
+  h1 span {
+    font-size: 2rem;
+  }
+
+  /* Center the navbar items and make them stack vertically */
+  .navbar-nav {
+    display: block;
+  }
+
+  .navbar-nav .nav-item {
+    display: block;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+}
+
+
