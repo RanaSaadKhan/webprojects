@@ -88,6 +88,7 @@ body{
     margin-left: 90px;
   }
   .img{
+    pointer-events: none;
     border-radius: 55px;
     vertical-align: middle;
     width: 25rem;
@@ -136,8 +137,19 @@ body{
       opacity: 0;
     }
   }
+ 
   /* Media query for screens smaller than 768px (tablet and mobile) */
-@media (max-width: 768px) {
+  @media (max-width: 980px) {
+    .img{        border-radius: 4px;
+      vertical-align: middle;
+      width: 11rem;
+      height: auto;
+      position: absolute;
+      top: 7rem;
+      right: 1.5rem;}
+  }
+
+  @media (max-width: 768px) {
   /* Make the navbar full width and collapse the items */
   .navbar {
     width: 100%;
@@ -148,7 +160,7 @@ body{
   }
 .img{
   border-radius: 5px;
-      width: 5rem;
+      width: 6rem;
       height: auto;
       position: absolute;
       top: 5rem;
@@ -213,7 +225,7 @@ body{
       width: 3.5rem;
       height: auto;
       position: absolute;
-      top: 5.1rem;
+      top: 8.4rem;
       right: 2.4rem;
   }
   /* Adjust the font size for the blinking cursor */
