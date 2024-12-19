@@ -678,10 +678,12 @@ section,
   position: absolute;
   inset: 0;
   display: block;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+  width: 86%;
+  height: 106%;
+  left: 7%;
+  object-fit: contain;
   z-index: 1;
+
 }
 
 .hero:before {
@@ -868,7 +870,12 @@ section,
   border-bottom: 5px solid var(--surface-color);
   height: 100%;
 }
-
+ /*.resume{
+  height: 40rem;
+  width: 30rem;
+  display: flex;
+  background-color: #060606;
+}*/
 .services .service-item .icon {
   color: var(--contrast-color);
   background: var(--accent-color);
