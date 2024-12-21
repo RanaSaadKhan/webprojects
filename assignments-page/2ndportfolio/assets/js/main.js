@@ -72,12 +72,22 @@
    * Scroll top button
    */
   let scrollTop = document.querySelector('.scroll-top');
-
+  let whatsappLink = document.querySelector('#whatsapp-link');
+  
+  // Function to toggle the visibility of both buttons
   function toggleScrollTop() {
     if (scrollTop) {
-      window.scrollY > 100 ? scrollTop.classList.add('active') : scrollTop.classList.remove('active');
+      if (window.scrollY > 100) {
+        scrollTop.classList.add('active');
+        whatsappLink.classList.add('active'); // Activate WhatsApp button too
+      } else {
+        scrollTop.classList.remove('active');
+        whatsappLink.classList.remove('active');
+      }
     }
   }
+  
+  // Scroll-to-top behavior
   scrollTop.addEventListener('click', (e) => {
     e.preventDefault();
     window.scrollTo({
@@ -85,9 +95,11 @@
       behavior: 'smooth'
     });
   });
-
+  
+  // Ensure buttons visibility is toggled on page load and scroll
   window.addEventListener('load', toggleScrollTop);
   document.addEventListener('scroll', toggleScrollTop);
+  
 
   /**
    * Animation on scroll function and init
@@ -101,6 +113,37 @@
     });
   }
   window.addEventListener('load', aosInit);
+/* cheat section*/
+document.addEventListener('DOMContentLoaded', () => {
+  const cheatButton = document.getElementById('cheat-button');
+  const chatBox = document.getElementById('chat-box');
+  const closeChat = document.getElementById('close-chat');
+  const sendMessage = document.getElementById('send-message');
+
+  if (cheatButton && chatBox && closeChat && sendMessage) {
+    // Toggle the cheat box visibility when the cheat button is clicked
+    cheatButton.addEventListener('click', () => {
+      if (chatBox.style.display === 'flex') {
+        chatBox.style.display = 'none';
+      } else {
+        chatBox.style.display = 'flex';
+      }
+    });
+
+    // Close the cheat box when the close button is clicked
+    closeChat.addEventListener('click', () => {
+      chatBox.style.display = 'none';
+    });
+
+    // Open the link when the Send Message button is clicked
+    sendMessage.addEventListener('click', () => {
+      chatBox.style.display = 'none'; // Hide the chat box after clicking send
+    });
+  } else {
+    console.error("One or more elements are missing in the DOM.");
+  }
+});
+
 
   /**
    * Init typed.js

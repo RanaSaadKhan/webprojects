@@ -12,29 +12,41 @@
 --------------------------------------------------------------*/
 /* Fonts */
 :root {
-  --default-font: "Roboto",  system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  --heading-font: "Raleway",  sans-serif;
-  --nav-font: "Poppins",  sans-serif;
+  --default-font: "Roboto", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --heading-font: "Raleway", sans-serif;
+  --nav-font: "Poppins", sans-serif;
 }
 
 /* Global Colors - The following color variables are used throughout the website. Updating them here will change the color scheme of the entire website */
-:root { 
-  --background-color: #ffffff; /* Background color for the entire website, including individual sections */
-  --default-color: #4e4e4e; /* Default color used for the majority of the text content across the entire website */
-  --heading-color: #0a090f; /* Color for headings, subheadings and title throughout the website */
-  --accent-color: #0078ff; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
-  --surface-color: #ffffff; /* The surface color is used as a background of boxed elements within sections, such as cards, icon boxes, or other elements that require a visual separation from the global background. */
-  --contrast-color: #ffffff; /* Contrast color for text, ensuring readability against backgrounds of accent, heading, or default colors. */
+:root {
+  --background-color: #ffffff;
+  /* Background color for the entire website, including individual sections */
+  --default-color: #4e4e4e;
+  /* Default color used for the majority of the text content across the entire website */
+  --heading-color: #0a090f;
+  /* Color for headings, subheadings and title throughout the website */
+  --accent-color: #0078ff;
+  /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
+  --surface-color: #ffffff;
+  /* The surface color is used as a background of boxed elements within sections, such as cards, icon boxes, or other elements that require a visual separation from the global background. */
+  --contrast-color: #ffffff;
+  /* Contrast color for text, ensuring readability against backgrounds of accent, heading, or default colors. */
 }
 
 /* Nav Menu Colors - The following color variables are used specifically for the navigation menu. They are separate from the global colors to allow for more customization options */
 :root {
-  --nav-color: #ffffff;  /* The default color of the main navmenu links */
-  --nav-hover-color: #ffffff; /* Applied to main navmenu links when they are hovered over or active */
-  --nav-mobile-background-color: #ffffff; /* Used as the background color for mobile navigation menu */
-  --nav-dropdown-background-color: #ffffff; /* Used as the background color for dropdown items that appear when hovering over primary navigation items */
-  --nav-dropdown-color: #212529; /* Used for navigation links of the dropdown items in the navigation menu. */
-  --nav-dropdown-hover-color: #0078ff; /* Similar to --nav-hover-color, this color is applied to dropdown navigation links when they are hovered over. */
+  --nav-color: #ffffff;
+  /* The default color of the main navmenu links */
+  --nav-hover-color: #ffffff;
+  /* Applied to main navmenu links when they are hovered over or active */
+  --nav-mobile-background-color: #ffffff;
+  /* Used as the background color for mobile navigation menu */
+  --nav-dropdown-background-color: #ffffff;
+  /* Used as the background color for dropdown items that appear when hovering over primary navigation items */
+  --nav-dropdown-color: #212529;
+  /* Used for navigation links of the dropdown items in the navigation menu. */
+  --nav-dropdown-hover-color: #0078ff;
+  /* Similar to --nav-hover-color, this color is applied to dropdown navigation links when they are hovered over. */
 }
 
 /* Color Presets - These classes override global colors when applied to any section or element, providing reuse of the sam color scheme. */
@@ -51,7 +63,9 @@
   --surface-color: #252525;
   --contrast-color: #ffffff;
 }
-
+.scroll-settings{
+  display: flex;
+}
 .accent-background {
   --background-color: #0078ff;
   --default-color: #ffffff;
@@ -60,7 +74,12 @@
   --surface-color: #3393ff;
   --contrast-color: #ffffff;
 }
-
+#name{
+  font-family: "Indie Flower", serif;
+  font-weight: 900;
+  font-style: normal;
+  font-size: 5rem;
+}
 /* Smooth scroll */
 :root {
   scroll-behavior: smooth;
@@ -100,12 +119,19 @@ h6 {
 ------------------------------*/
 .php-email-form .error-message {
   display: none;
+  color: #ffffff;
+  background: #059652;
+  text-align: center;
+  padding: 15px;
+  margin-bottom: 24px;
+  font-weight: 600;
+  /*display: none;
   background: #df1529;
   color: #ffffff;
   text-align: left;
   padding: 15px;
   margin-bottom: 24px;
-  font-weight: 600;
+  font-weight: 600;*/
 }
 
 .php-email-form .sent-message {
@@ -530,18 +556,24 @@ h6 {
 /*--------------------------------------------------------------
 # Scroll Top Button
 --------------------------------------------------------------*/
+/* Scroll Top Styles */
 .scroll-top {
   position: fixed;
   visibility: hidden;
   opacity: 0;
-  right: 15px;
-  bottom: -15px;
-  z-index: 99999;
+  left: 15px; /* Move to the left side of the screen */
+  bottom: 15px;
+  z-index: 9999;
   background-color: var(--accent-color);
   width: 44px;
   height: 44px;
-  border-radius: 50px;
-  transition: all 0.4s;
+  border-radius: 50%;
+  transition: all 0.4s ease;
+}
+
+.scroll-top.active {
+  visibility: visible;
+  opacity: 1;
 }
 
 .scroll-top i {
@@ -552,15 +584,125 @@ h6 {
 
 .scroll-top:hover {
   background-color: color-mix(in srgb, var(--accent-color), transparent 20%);
-  color: var(--contrast-color);
 }
 
-.scroll-top.active {
-  visibility: visible;
-  opacity: 1;
+/* WhatsApp Button Styles */
+.whatsapp-button {
+  position: fixed;
+  right: 15px; /* Move to the right side of the screen */
   bottom: 15px;
+  z-index: 9999;
+  background-color: transparent;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  visibility: visible; /* Always visible */
+  opacity: 1;
 }
 
+.whatsapp-button img {
+  width: 100%;
+  height: 100%;
+  transition: transform 0.6s ease; /* Smooth zoom effect */
+}
+
+.whatsapp-button img:hover {
+  transform: scale(1.1); /* Zoom effect */
+}
+
+/* cheat section*/
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f0f0f0;
+}
+
+#cheat-button {
+  position: fixed;
+  bottom: 12px;
+  right: 20px;
+  z-index: 2;
+  height: 46px;
+  width: 39px;
+  background: white;
+  border: none;
+  cursor: pointer;
+}
+
+#chat-box {
+  z-index: 3;
+  position: fixed;
+  bottom: 80px;
+  right: 20px;
+  width: 300px;
+  background-color: #e8f5e9;
+  border: 1px solid #4caf50;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+#chat-box h3 {
+  margin: 0;
+  color: #4caf50;
+  font-size: 18px;
+  text-align: center;
+}
+
+#chat-box p {
+  margin: 10px 0;
+  color: #333;
+  text-align: center;
+}
+
+#send-message {
+  background-color: green;
+  color: white;
+  border: none;
+  border-radius: 50px;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 16px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  text-decoration: none;
+  text-align: center;
+}
+#send-message:hover {
+  background-color: #25d366;
+  color: white;
+  border: none;
+  border-radius: 50px;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 16px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  text-decoration: none;
+  text-align: center;
+}
+#close-chat {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  font-size: 18px;
+  cursor: pointer;
+  color: #666;
+}
+
+/* WhatsApp button styling */
+.whatsapp-button img {
+  width: 150%;
+  height: 150%;
+}
+
+.whatsapp-button {
+  display: none;
+}
 /*--------------------------------------------------------------
 # Disable aos animation delay on mobile devices
 --------------------------------------------------------------*/
@@ -569,7 +711,16 @@ h6 {
     transition-delay: 0 !important;
   }
 }
-
+.online{
+  position: absolute;
+    right: -11px;
+    background-color: #22cf63;
+    top: 1px;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    border: 0.1px solid white;
+}
 /*--------------------------------------------------------------
 # Global Page Titles & Breadcrumbs
 --------------------------------------------------------------*/
@@ -679,8 +830,9 @@ section,
   inset: 0;
   display: block;
   width: 86%;
-  height: 106%;
+  /* height: 106%; */
   left: 7%;
+  top: -25rem;
   object-fit: contain;
   z-index: 1;
 
@@ -688,10 +840,12 @@ section,
 
 .hero:before {
   content: "";
-  background: color-mix(in srgb, var(--background-color), transparent 30%);
+  background:
+  url(/assets/img/background.gif)
+  color-mix(in srgb, var(--background-color), transparent 30%);
   position: absolute;
   inset: 0;
-  z-index: 2;
+  z-index: 1;
 }
 
 .hero .container {
@@ -870,12 +1024,157 @@ section,
   border-bottom: 5px solid var(--surface-color);
   height: 100%;
 }
- /*.resume{
+
+.cv {
   height: 40rem;
-  width: 30rem;
+  width: 100%;
   display: flex;
-  background-color: #060606;
-}*/
+  justify-content: center;
+}
+
+
+.cv-settings {
+  height: 40rem;
+  border-radius: 126px;
+  width: 30rem;
+  background-color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+
+/* Basic button styling */
+.download-btn {
+  display: flex;
+  align-items: center;
+  padding: 12px 30px;
+  background-color: transparent;
+  color: #333;
+  font-size: 16px;
+  /* margin-bottom: -16px; */
+  font-weight: bold;
+  height: 3rem;
+  justify-content: center;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  /* Smooth transition for hover effect */
+}
+
+/* Style for the download icon */
+.download-icon {
+  margin-left: 10px;
+  /* Space between text and icon */
+  font-size: 20px;
+  /* Icon size */
+  color: #007BFF;
+  /* Blue color for the icon */
+}
+
+/* Hover effect */
+.download-btn:hover {
+  background-color: #FBC02D;
+  /* Slightly darker yellow when hovered */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  /* Shadow effect on hover */
+  transform: translateY(-2px);
+  /* Slightly lift the button */
+}
+
+/* Active (when button is clicked) effect */
+.download-btn:active {
+  background-color: #F9A825;
+  /* Even darker yellow */
+  transform: translateY(0);
+  /* Button returns to original position */
+}
+
+/* Focus effect (when button is focused by keyboard or mouse) */
+.download-btn:focus {
+  outline: none;
+  /* Remove default outline */
+  box-shadow: 0 0 5px 2px rgba(255, 235, 59, 0.5);
+  /* Soft yellow glow */
+}
+
+/* General Section Styling */
+.skills-section {
+  text-align: center;
+  padding: 50px 20px;
+  font-family: 'Arial', sans-serif;
+}
+
+.skills-section h1 {
+  font-size: 36px;
+  margin-bottom: 30px;
+  color: #ffffff;
+}
+
+/* Skills Container */
+.skills-container {
+  display: flex;
+  justify-content: center;
+  gap: 70px;
+  flex-wrap: wrap;
+}
+
+/* Individual Skill Styling */
+.skill {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
+}
+
+.skill img {
+  width: 60%;
+  height: auto;
+}
+
+/* Rotate on Hover */
+.skill:hover {
+  transform: rotate(360deg);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 .services .service-item .icon {
   color: var(--contrast-color);
   background: var(--accent-color);
@@ -1386,7 +1685,11 @@ section,
 .contact .php-email-form button[type=submit]:hover {
   background: color-mix(in srgb, var(--accent-color), transparent 20%);
 }
-
+.types{
+  font-family: "Tenor Sans", serif;
+  font-weight: 100;
+  font-style: normal;
+}
 /*--------------------------------------------------------------
 # Portfolio Details Section
 --------------------------------------------------------------*/
