@@ -143,6 +143,29 @@ document.addEventListener('DOMContentLoaded', () => {
     console.error("One or more elements are missing in the DOM.");
   }
 });
+/* cv download */
+// Wait until the DOM is fully loaded
+document.addEventListener('DOMContentLoaded', function () {
+  document.querySelector('.zoom-text').addEventListener('click', function() {
+    // Show the modal to display PDF in fullscreen
+    document.getElementById('fullscreen-modal').style.display = 'flex';
+  });
+
+  // Close the modal when the close button is clicked
+  function closeModal() {
+    document.getElementById('fullscreen-modal').style.display = 'none';
+  }
+
+  // Add event listener to close the modal when clicking outside
+  document.getElementById('fullscreen-modal').addEventListener('click', function(e) {
+    if (e.target === this) {
+      closeModal();
+    }
+  });
+
+  // Close button click event
+  document.querySelector('.close-btn').addEventListener('click', closeModal);
+});
 
 
   /**

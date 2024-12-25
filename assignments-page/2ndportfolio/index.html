@@ -90,7 +90,6 @@
     <section id="hero" class="hero section dark-background">
 
 
-
       <div class="container d-flex flex-column align-items-center justify-content-center text-center" data-aos="fade-up"
         data-aos-delay="100">
         <h2 id="name">I am Saad Muhammad Khan</h2>
@@ -282,14 +281,33 @@
         <h2>Services</h2>
         <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
         <div class="cv">
-          <div class="cv-settings"><button class="download-btn">
-              Download
-              <span class="download-icon">&#8681;</span> <!-- Unicode for a downward arrow -->
-            </button>
-
-
-          </div>
-        </div><!-- End Section Title -->
+          <img src="cv-img.PNG" class="cv-settings">
+       
+          
+          <!-- Zoom Text (initially hidden) -->
+          <div class="zoom-text">Zoom</div>
+        </div>
+        
+      </div>
+      <a href="cv.pdf" download="cv.pdf" class="download-btn">
+      Download CV
+        <span class="download-icon">&#8681;</span>
+      </a>
+      
+      <!-- Full Screen Modal (hidden by default) -->
+      <div id="fullscreen-modal" class="fullscreen-modal">
+        <div class="fullscreen-content">
+          <button class="close-btn">Close</button>
+          <embed src="cv.pdf" width="100%" height="100%" type="application/pdf">
+        </div>
+      </div>
+      
+      <!-- Place the JavaScript at the end of the body tag to ensure it's loaded after HTML -->
+      <script src="script.js"></script>
+      </body>
+      </html>
+      
+      <!-- End Section Title -->
 
 
         <div class="container">
@@ -624,25 +642,25 @@
             <section class="skills-section">
               <h1>What I Know</h1>
               <div class="skills-container">
-                <div class="skill">
+                <div class="skill-img-tab">
                   <img src="https://upload.wikimedia.org/wikipedia/commons/6/61/HTML5_logo_and_wordmark.svg"
                     alt="HTML Logo" />
                 </div>
-                <div class="skill">
+                <div class="skill-img-tab">
                   <img src="https://upload.wikimedia.org/wikipedia/commons/d/d5/CSS3_logo_and_wordmark.svg"
                     alt="CSS Logo" />
                 </div>
-                <div class="skill">
+                <div class="skill-img-tab">
                   <img src="https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png"
                     alt="JavaScript Logo" />
                 </div>
-                <div class="skill">
+                <div class="skill-img-tab">
                   <img src="jquery.png" alt="jQuery Logo" />
                 </div>
-                <div class="skill">
+                <div class="skill-img-tab">
                   <img src="office.png" alt="MS Word Logo" />
                 </div>
-                <div class="skill">
+                <div class="skill-img-tab">
                   <img src="wordpress.png" alt="MS Word Logo" />
                 </div>
               </div>
