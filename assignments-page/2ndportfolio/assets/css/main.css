@@ -57,7 +57,7 @@
 }
 
 .dark-background {
-  --background-color: #060606;
+  --background: #060606;
   --default-color: #ffffff;
   --heading-color: #ffffff;
   --surface-color: #252525;
@@ -839,10 +839,10 @@ section,
 
 }
 .hero:before {
-  content: "";
-  background:
-  url('/assets/img/background.gif') 
-  color-mix(in srgb, var(--background-color), transparent 30%);
+  content: "";/* Apply both color-mix and background image */
+  background: 
+    url('/assets/img/background.gif');
+  
   position: absolute;
   inset: 0;
   z-index: 1;
