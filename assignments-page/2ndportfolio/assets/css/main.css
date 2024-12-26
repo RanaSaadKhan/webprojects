@@ -1735,9 +1735,10 @@ section,
   background: color-mix(in srgb, var(--accent-color), transparent 20%);
 }
 .types{
-  font-family: "Tenor Sans", serif;
-  font-weight: 100;
-  font-style: normal;
+ font-size: 23px;
+ font-family: cursive;
+ font-style: normal;
+ font-weight: 150;
 }
 /*--------------------------------------------------------------
 # Portfolio Details Section
